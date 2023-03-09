@@ -1,0 +1,4 @@
+cwd=$(pwd -P)cwd=$(pwd -P)
+
+# Print the absolute path of the current working directory
+echo $cwd
