@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "$(echo "$WATER" | tr -d '\n' | tr -C 'a-z' '0-9' | tr 'abcdefghijklmnopqrstuvwxyz' '0123456789' ; echo "+"; echo "$STIR" | tr -d '\n' | tr -C 'a-z' '0-9' | tr 'abcdefghijklmnopqrstuvwxyz' '0123456789') " | bc | tr -d '\n' | sed 's/[0-9]\{1\}/& /g' | awk '{for(i=1;i<=NF;i++){printf("%c",96+$i)}}' && echo
+
