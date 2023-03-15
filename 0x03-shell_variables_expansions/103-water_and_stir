@@ -1,2 +1,3 @@
 #!/bin/bash
-echo $(echo "$1" "$2" | tr -d [a-z] | tr a-z 0123456789 | tr '\n' + | sed 's/.$//' | bc | xargs printf "%x" | tr a-f A-Z)
+printf "$(printf "%s" "${WATER}${STIR}" | tr -d [a-z] | tr a-z 0123456789 | printf "%d" "$(cat)")" | xxd -p -r | tr a-f A-Z
+
